@@ -2,51 +2,91 @@
 <html>
 <head>
   <title>Tata Nexon - DriveVerse</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #000000, #1c1c1c);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: red;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      box-shadow: 0 0 25px red;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    button {
+      padding: 12px;
+      margin-top: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, red, orange);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .back {
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
 
-<body style="background:black; color:white; text-align:center; font-family:Arial;">
+<body>
 
-<h1 style="color:red;">Tata Nexon</h1>
-<p>Step Into the Experience</p>
+<h1>DriveVerse</h1>
+<h2>Tata Nexon</h2>
 
-<!-- CAR IMAGE -->
-<img src="car.jpg.jpg" width="300" style="border-radius:10px;">
+<div class="card">
 
-<br><br>
+  <img src="car.jpg">
 
-<!-- ENGINE SOUND BUTTON -->
-<button onclick="playSound()" 
-style="padding:12px; background:red; color:white; border:none; border-radius:5px;">
-Start Engine 🔊
-</button>
+  <button onclick="playSound()">Start Engine 🔊</button>
 
-<!-- AUDIO FILE -->
-<audio id="engine">
-  <source src="engine.mp3" type="audio/mpeg">
-</audio>
+  <audio id="engine">
+    <source src="engine.mp3" type="audio/mpeg">
+  </audio>
 
-<!-- SCRIPT -->
-<script>
-function playSound() {
-  var sound = document.getElementById("engine");
-  sound.currentTime = 0;
-  sound.play();
-}
-</script>
+  <script>
+    function playSound() {
+      document.getElementById("engine").play();
+    }
+  </script>
 
-<br><br>
+  <p>🚗 Mileage: 17 km/l</p>
+  <p>⛽ Fuel: Petrol / Diesel</p>
+  <p>💰 Price: ₹8L - ₹15L</p>
 
-<!-- CAR DETAILS -->
-<p>✔ Mileage: 17 km/l</p>
-<p>✔ Fuel: Petrol / Diesel</p>
-<p>✔ Price: ₹8L - ₹15L</p>
+</div>
 
-<br>
-
-<!-- BACK BUTTON -->
-<a href="index.html">
-<button style="padding:10px;">⬅ Back</button>
-</a>
+<div class="back">
+  <a href="index.html">
+    <button>⬅ Back</button>
+  </a>
+</div>
 
 </body>
 </html>
