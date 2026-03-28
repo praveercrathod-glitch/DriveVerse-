@@ -8,14 +8,20 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Tata_Nexon_Facelift_2023.jpg" width="300" style="border-radius:10px;">
 
-<button onclick="document.getElementById('engine').play()" 
+<button onclick="playSound()" 
 style="padding:10px; background:red; color:white;">
 Start Engine 🔊
 </button>
 
-<audio id="engine">
-  <source src="https://www.soundjay.com/mechanical/sounds/car-start-1.mp3" type="audio/mpeg">
-</audio>
+<audio id="engine" src="https://www.fesliyanstudios.com/play-mp3/387"></audio>
+
+<script>
+function playSound() {
+  var sound = document.getElementById("engine");
+  sound.currentTime = 0;
+  sound.play();
+}
+</script>
 
 <br><br>
 
