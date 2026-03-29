@@ -13,6 +13,10 @@
       text-align: center;
     }
 
+    h2 {
+      margin-top: 20px;
+    }
+
     .card {
       background: rgba(255,255,255,0.05);
       border-radius: 20px;
@@ -28,13 +32,14 @@
     }
 
     button {
-      padding: 10px;
+      padding: 12px;
       margin-top: 10px;
       width: 100%;
       border: none;
       border-radius: 8px;
       background: red;
       color: white;
+      font-weight: bold;
     }
 
     .wave {
@@ -58,21 +63,26 @@
 
 <div class="card">
 
-  <img src="car.jpg.jpg">
+  <!-- IMAGE -->
+  <img src="car.jpg">
 
+  <!-- BUTTONS -->
   <button onclick="playSound()">Start Engine 🔊</button>
   <button onclick="revSound()">Rev Engine 💨</button>
 
+  <!-- WAVE -->
   <div class="wave"></div>
 
+  <!-- AUDIO -->
   <audio id="engine">
     <source src="engine.mp3" type="audio/mpeg">
   </audio>
 
   <audio id="rev">
-    <source src="revv1.mp3" type="audio/mpeg">
+    <source src="rev.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- SCRIPT -->
   <script>
     function playSound() {
       let s = document.getElementById("engine");
@@ -87,9 +97,23 @@
     }
   </script>
 
+  <!-- DETAILS -->
+  <p>🚗 Mileage: 17 km/l</p>
+  <p>⛽ Fuel: Petrol/Diesel</p>
+  <p>💰 Price: ₹8L - ₹15L</p>
+
+  <!-- CARDEKHO LINK -->
+  <a href="https://www.cardekho.com/tata/nexon">
+    <button>Check Price 💰</button>
+  </a>
+
 </div>
 
-<a href="index.html"><button>⬅ Back</button></a>
+<br>
+
+<a href="index.html">
+  <button>⬅ Back</button>
+</a>
 
 </body>
 </html>
