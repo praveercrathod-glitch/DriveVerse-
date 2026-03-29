@@ -2,91 +2,94 @@
 <html>
 <head>
   <title>Tata Nexon - DriveVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: linear-gradient(135deg, #000000, #1c1c1c);
+      background: #000;
       color: white;
       text-align: center;
     }
 
-    h1 {
-      margin-top: 20px;
-      color: red;
-    }
-
     .card {
       background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
       border-radius: 20px;
       width: 300px;
       margin: auto;
       padding: 20px;
-      box-shadow: 0 0 25px red;
+      box-shadow: 0 0 20px red;
     }
 
     img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 10px;
     }
 
     button {
-      padding: 12px;
+      padding: 10px;
       margin-top: 10px;
       width: 100%;
       border: none;
       border-radius: 8px;
-      background: linear-gradient(to right, red, orange);
+      background: red;
       color: white;
-      font-weight: bold;
-      cursor: pointer;
     }
 
-    button:hover {
-      opacity: 0.9;
+    .wave {
+      margin-top: 10px;
+      height: 5px;
+      background: red;
+      animation: wave 1s infinite;
     }
 
-    .back {
-      margin-top: 20px;
+    @keyframes wave {
+      0% { transform: scaleX(0.5); }
+      50% { transform: scaleX(1.2); }
+      100% { transform: scaleX(0.5); }
     }
-
   </style>
 </head>
 
 <body>
 
-<h1>DriveVerse</h1>
 <h2>Tata Nexon</h2>
 
 <div class="card">
 
-  <img src="car.jpg.jpg">
+  <img src="car.jpg">
 
   <button onclick="playSound()">Start Engine 🔊</button>
+  <button onclick="revSound()">Rev Engine 💨</button>
+
+  <div class="wave"></div>
 
   <audio id="engine">
     <source src="engine.mp3" type="audio/mpeg">
   </audio>
 
+  <audio id="rev">
+    <source src="rev.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
     function playSound() {
-      document.getElementById("engine").play();
+      let s = document.getElementById("engine");
+      s.currentTime = 0;
+      s.play();
+    }
+
+    function revSound() {
+      let r = document.getElementById("rev");
+      r.currentTime = 0;
+      r.play();
     }
   </script>
 
-  <p>🚗 Mileage: 17 km/l</p>
-  <p>⛽ Fuel: Petrol / Diesel</p>
-  <p>💰 Price: ₹8L - ₹15L</p>
-
 </div>
 
-<div class="back">
-  <a href="index.html">
-    <button>⬅ Back</button>
-  </a>
-</div>
+<a href="index.html"><button>⬅ Back</button></a>
 
 </body>
 </html>
