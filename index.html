@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>DriveVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -13,60 +14,32 @@
     }
 
     h1 {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 42px;
       background: linear-gradient(to right, white, red);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .tagline {
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
     .container {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 20px;
       padding: 20px;
+      max-width: 300px;
+      margin: auto;
     }
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      width: 230px;
+    .car-btn {
       padding: 15px;
-      box-shadow: 0 0 25px rgba(255,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 40px red;
-    }
-
-    img {
-      width: 100%;
       border-radius: 12px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
       border: none;
-      border-radius: 8px;
-      background: linear-gradient(to right, red, orange);
+      font-size: 16px;
+      background: rgba(255,255,255,0.08);
       color: white;
-      font-weight: bold;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(255,0,0,0.3);
       cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
     }
 
   </style>
@@ -75,23 +48,21 @@
 <body>
 
 <h1>DriveVerse</h1>
-<p class="tagline">Step Into Your Next Car</p>
-
-<h2>Featured Cars</h2>
+<p>Step Into Your Next Car</p>
 
 <div class="container">
 
-  <div class="card">
-    <h3>Tata Nexon</h3>
-    <h3>Hundai i20</h3>
-    <a href="tata-nexon.html">
-      <button>Experience 🚗</button>
-    <a href="hyundai-i20.html">
-      <button>Experience 🚗</button>
-    </a>
-  </div>
+  <a href="tata-nexon.html">
+    <button class="car-btn">🚗 Tata Nexon</button>
+  </a>
+
+  <a href="hyundai-i20.html">
+    <button class="car-btn">🚗 Hyundai i20</button>
+  </a>
 
 </div>
 
+</body>
+</html>
 </body>
 </html>
