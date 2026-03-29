@@ -2,45 +2,33 @@
 <html>
 <head>
   <title>Hyundai i20 - DriveVerse</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: linear-gradient(135deg, #000000, #1c1c1c);
+      background: #000;
       color: white;
       text-align: center;
     }
 
-    h1 {
+    h2 {
       margin-top: 20px;
-      background: linear-gradient(to right, cyan, white);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     .card {
       background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
       border-radius: 20px;
       width: 300px;
       margin: auto;
       padding: 20px;
-      box-shadow: 0 0 25px cyan;
-      animation: glow 2s infinite;
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 10px cyan; }
-      50% { box-shadow: 0 0 25px blue; }
-      100% { box-shadow: 0 0 10px cyan; }
+      box-shadow: 0 0 20px cyan;
     }
 
     img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 10px;
     }
 
     button {
@@ -49,26 +37,28 @@
       width: 100%;
       border: none;
       border-radius: 8px;
-      background: linear-gradient(to right, cyan, blue);
-      color: white;
+      background: cyan;
+      color: black;
       font-weight: bold;
-      cursor: pointer;
     }
 
-    button:hover {
-      opacity: 0.9;
+    .wave {
+      margin-top: 10px;
+      height: 5px;
+      background: cyan;
+      animation: wave 1s infinite;
     }
 
-    .back {
-      margin-top: 20px;
+    @keyframes wave {
+      0% { transform: scaleX(0.5); }
+      50% { transform: scaleX(1.2); }
+      100% { transform: scaleX(0.5); }
     }
-
   </style>
 </head>
 
 <body>
 
-<h1>DriveVerse</h1>
 <h2>Hyundai i20</h2>
 
 <div class="card">
@@ -76,32 +66,34 @@
   <!-- IMAGE -->
   <img src="car2.jpg">
 
-  <!-- ENGINE BUTTON -->
+  <!-- BUTTONS -->
   <button onclick="playSound()">Start Engine 🔊</button>
+  <button onclick="revSound()">Rev Engine 💨</button>
+
+  <!-- WAVE -->
+  <div class="wave"></div>
 
   <!-- AUDIO -->
   <audio id="engine">
     <source src="engine2.mp3" type="audio/mpeg">
   </audio>
-<button onclick="revSound()">Rev Engine 💨</button>
 
-<audio id="rev">
-  <source src="revv2.mp3" type="audio/mpeg">
-</audio>
+  <audio id="rev">
+    <source src="rev.mp3" type="audio/mpeg">
+  </audio>
 
-<script>
-function revSound() {
-  let r = document.getElementById("rev");
-  r.currentTime = 0;
-  r.play();
-}
-</script>
   <!-- SCRIPT -->
   <script>
     function playSound() {
-      let sound = document.getElementById("engine");
-      sound.currentTime = 0;
-      sound.play();
+      let s = document.getElementById("engine");
+      s.currentTime = 0;
+      s.play();
+    }
+
+    function revSound() {
+      let r = document.getElementById("rev");
+      r.currentTime = 0;
+      r.play();
     }
   </script>
 
@@ -110,18 +102,18 @@ function revSound() {
   <p>⛽ Fuel: Petrol</p>
   <p>💰 Price: ₹7L - ₹11L</p>
 
-  <!-- PRICE BUTTON -->
-  <a href="https://www.cardekho.com">
+  <!-- CARDEKHO LINK -->
+  <a href="https://www.cardekho.com/hyundai/i20">
     <button>Check Price 💰</button>
   </a>
 
 </div>
 
-<div class="back">
-  <a href="index.html">
-    <button>⬅ Back</button>
-  </a>
-</div>
+<br>
+
+<a href="index.html">
+  <button>⬅ Back</button>
+</a>
 
 </body>
-</html
+</html>
