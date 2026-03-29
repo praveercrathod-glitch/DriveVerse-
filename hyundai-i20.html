@@ -83,7 +83,19 @@
   <audio id="engine">
     <source src="engine2.mp3" type="audio/mpeg">
   </audio>
+<button onclick="revSound()">Rev Engine 💨</button>
 
+<audio id="rev">
+  <source src="revv2.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function revSound() {
+  let r = document.getElementById("rev");
+  r.currentTime = 0;
+  r.play();
+}
+</script>
   <!-- SCRIPT -->
   <script>
     function playSound() {
