@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tata Cars</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyundai Cars</title>
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
+      background: black;
       color: white;
       text-align: center;
+      font-family: Arial;
     }
 
     h2 {
-      margin-top: 25px;
-      font-size: 30px;
-      color: #ff3c3c;
+      margin-top: 30px;
+      color: cyan;
     }
 
-    .container {
+    .card {
+      margin: 20px;
       padding: 20px;
-    }
-
-    .car-card {
-      background: rgba(255,255,255,0.05);
       border-radius: 15px;
-      padding: 20px;
-      margin: 15px 0;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 15px rgba(255,0,0,0.4);
-      transition: 0.3s;
-    }
-
-    .car-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px red;
+      background: #111;
+      box-shadow: 0 0 20px cyan;
+      display: inline-block;
+      width: 200px;
     }
 
     a {
       text-decoration: none;
       color: white;
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 18px;
     }
 
     button {
       margin-top: 20px;
-      padding: 10px 20px;
-      border-radius: 10px;
+      padding: 10px;
       border: none;
-      background: red;
-      color: white;
-      font-size: 16px;
+      border-radius: 10px;
+      background: cyan;
+      color: black;
     }
   </style>
 </head>
@@ -61,15 +47,11 @@
 
 <h2>Hyundai Cars 🚗</h2>
 
-<div class="container">
+<a href="hyundai-i20.html">
+  <div class="card">Hyundai i20</div>
+</a>
 
-  <a href="hyundai-i120.html">
-    <div class="car-card">🚗 Tata Nexon</div>
-  </a>
-
-  <!-- Add more cars here later -->
-
-</div>
+<br>
 
 <a href="index.html">
   <button>⬅ Back</button>
