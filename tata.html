@@ -2,60 +2,68 @@
 <html>
 <head>
   <title>Tata Cars</title>
-
   <style>
     body {
-      background: black;
+      background: linear-gradient(135deg, black, #1a1a1a);
       color: white;
       text-align: center;
       font-family: Arial;
+      padding-top: 50px;
     }
 
-    h2 {
-      margin-top: 30px;
+    h1 {
       color: red;
+      font-size: 40px;
     }
 
     .card {
-      margin: 20px;
-      padding: 20px;
-      border-radius: 15px;
       background: #111;
-      box-shadow: 0 0 20px red;
-      display: inline-block;
-      width: 200px;
+      padding: 20px;
+      border-radius: 20px;
+      width: 80%;
+      margin: auto;
+      box-shadow: 0 0 30px red;
     }
 
-    a {
-      text-decoration: none;
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 15px;
+      width: 80%;
+      background: #222;
       color: white;
+      border-radius: 15px;
       font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 0 15px red;
     }
 
-    button {
+    .btn:hover {
+      background: red;
+    }
+
+    .back {
       margin-top: 20px;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
+      display: inline-block;
+      padding: 10px 20px;
       background: red;
       color: white;
+      border-radius: 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-<h2>Tata Cars 🚗</h2>
+  <h1>Tata Cars 🚗</h1>
 
-<a href="tata-nexon.html">
-  <div class="card">Tata Nexon</div>
-</a>
+  <div class="card">
+    <!-- FIXED LINK HERE -->
+    <a class="btn" href="tata-nexon.html">🚗 Tata Nexon</a>
+  </div>
 
-<br>
-
-<a href="index.html">
-  <button>⬅ Back</button>
-</a>
+  <a class="back" href="index.html">⬅ Back</a>
 
 </body>
 </html>
