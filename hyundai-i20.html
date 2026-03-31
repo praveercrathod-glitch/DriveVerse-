@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Hyundai i20</title>
+
   <style>
     body {
       background: black;
@@ -10,16 +11,18 @@
       font-family: Arial;
     }
 
-    h1 {
-      color: cyan;
-      margin-top: 30px;
-    }
+    h1 { color: cyan; }
 
-    img {
+    .car-img {
       width: 85%;
       border-radius: 20px;
       margin-top: 20px;
-      box-shadow: 0 0 20px cyan;
+      box-shadow: 0 0 25px cyan;
+      transition: 0.3s;
+    }
+
+    .car-img:hover {
+      transform: scale(1.03);
     }
 
     .btn {
@@ -38,28 +41,30 @@
 
 <body>
 
-  <h1>Hyundai i20 🚗</h1>
+<h1>Hyundai i20 🚗</h1>
 
-  <!-- IMAGE -->
-  <img src="car2.jpg">
+<img src="car2.jpg" class="car-img">
 
-  <button class="btn" onclick="start()">Start Engine 🔊</button>
-  <button class="btn" onclick="rev()">Rev Engine 🔥</button>
+<button class="btn" onclick="start()">Start Engine 🔊</button>
+<button class="btn" onclick="rev()">Rev Engine 🔥</button>
 
-  <a class="btn" href="hyundai.html">⬅ Back</a>
+<a class="btn" href="https://www.cardekho.com/hyundai/i20" target="_blank">
+Check Price 💰
+</a>
 
-  <audio id="startSound" src="engine2.mp3"></audio>
-  <audio id="revSound" src="revv2.mp3"></audio>
+<a class="btn" href="hyundai.html">⬅ Back</a>
 
-  <script>
-    function start() {
-      document.getElementById("startSound").play();
-    }
+<audio id="startSound" src="engine2.mp3"></audio>
+<audio id="revSound" src="revv2.mp3"></audio>
 
-    function rev() {
-      document.getElementById("revSound").play();
-    }
-  </script>
+<script>
+function start() {
+  document.getElementById("startSound").play();
+}
+function rev() {
+  document.getElementById("revSound").play();
+}
+</script>
 
 </body>
 </html>
