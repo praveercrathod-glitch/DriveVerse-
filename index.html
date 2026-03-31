@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>DriveVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -12,24 +14,33 @@
     }
 
     h1 {
-      margin-top: 60px;
-      font-size: 50px;
-      background: linear-gradient(to right, pink, red);
+      margin-top: 40px;
+      font-size: 45px;
+      background: linear-gradient(to right, red, pink);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    input {
+      margin-top: 20px;
+      padding: 12px;
+      width: 70%;
+      border-radius: 10px;
+      border: none;
+      outline: none;
     }
 
     .btn {
       display: block;
       width: 70%;
-      margin: 20px auto;
-      padding: 18px;
-      font-size: 20px;
-      border-radius: 20px;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 15px;
       text-decoration: none;
       color: white;
       background: #1c1c1c;
       box-shadow: 0 0 20px rgba(255,0,0,0.5);
+      font-size: 18px;
     }
 
     .btn:hover {
@@ -40,11 +51,24 @@
 
 <body>
 
-  <h1>DriveVerse</h1>
-  <p>Step Into Your Next Car</p>
+<h1>DriveVerse 🚗</h1>
 
-  <a class="btn" href="tata.html">🚗 Tata</a>
-  <a class="btn" href="hyundai.html">🚗 Hyundai</a>
+<input type="text" id="search" placeholder="Search car or brand..." onkeyup="searchCar()">
+
+<a class="btn" href="tata.html">Tata</a>
+<a class="btn" href="hyundai.html">Hyundai</a>
+
+<script>
+function searchCar() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let buttons = document.getElementsByClassName("btn");
+
+  for (let i = 0; i < buttons.length; i++) {
+    let text = buttons[i].innerText.toLowerCase();
+    buttons[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+</script>
 
 </body>
 </html>
