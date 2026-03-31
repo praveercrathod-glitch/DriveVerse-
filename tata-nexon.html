@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tata Cars</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Tata Nexon</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
+      background: black;
       color: white;
       text-align: center;
+      font-family: Arial;
     }
 
-    h2 {
-      margin-top: 25px;
-      font-size: 30px;
-      color: #ff3c3c;
-    }
+    h1 { color: red; }
 
-    .container {
-      padding: 20px;
-    }
-
-    .car-card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 15px 0;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 15px rgba(255,0,0,0.4);
-      transition: 0.3s;
-    }
-
-    .car-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px red;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
+    .btn {
+      display: block;
+      width: 70%;
+      margin: 20px auto;
+      padding: 15px;
       background: red;
+      border-radius: 15px;
       color: white;
-      font-size: 16px;
+      border: none;
+      font-size: 18px;
     }
   </style>
 </head>
 
 <body>
 
-<h2>Tata Cars 🚗</h2>
+  <h1>Tata Nexon</h1>
 
-<div class="container">
+  <button class="btn" onclick="start()">Start Engine 🔊</button>
+  <button class="btn" onclick="rev()">Rev Engine 🔥</button>
 
-  <a href="tata-nexon.html">
-    <div class="car-card">🚗 Tata Nexon</div>
-  </a>
+  <br>
+  <a class="btn" href="/DriveVerse-/tata.html">⬅ Back</a>
 
-  <!-- Add more cars here later -->
+  <audio id="startSound" src="engine.mp3"></audio>
+  <audio id="revSound" src="revv1.mp3"></audio>
 
-</div>
+  <script>
+    function start() {
+      document.getElementById("startSound").play();
+    }
 
-<a href="index.html">
-  <button>⬅ Back</button>
-</a>
+    function rev() {
+      document.getElementById("revSound").play();
+    }
+  </script>
 
 </body>
 </html>
