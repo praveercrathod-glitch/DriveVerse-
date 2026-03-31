@@ -10,7 +10,17 @@
       font-family: Arial;
     }
 
-    h1 { color: cyan; }
+    h1 {
+      color: cyan;
+      margin-top: 30px;
+    }
+
+    img {
+      width: 85%;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px cyan;
+    }
 
     .btn {
       display: block;
@@ -28,12 +38,14 @@
 
 <body>
 
-  <h1>Hyundai i20</h1>
+  <h1>Hyundai i20 🚗</h1>
+
+  <!-- IMAGE -->
+  <img src="car2.jpg">
 
   <button class="btn" onclick="start()">Start Engine 🔊</button>
   <button class="btn" onclick="rev()">Rev Engine 🔥</button>
 
-  <br>
   <a class="btn" href="hyundai.html">⬅ Back</a>
 
   <audio id="startSound" src="engine2.mp3"></audio>
