@@ -10,7 +10,17 @@
       font-family: Arial;
     }
 
-    h1 { color: red; }
+    h1 {
+      color: red;
+      margin-top: 30px;
+    }
+
+    img {
+      width: 85%;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px red;
+    }
 
     .btn {
       display: block;
@@ -28,12 +38,14 @@
 
 <body>
 
-  <h1>Tata Nexon</h1>
+  <h1>Tata Nexon 🚗</h1>
+
+  <!-- IMAGE HERE -->
+  <img src="car.jpg">
 
   <button class="btn" onclick="start()">Start Engine 🔊</button>
   <button class="btn" onclick="rev()">Rev Engine 🔥</button>
 
-  <br>
   <a class="btn" href="tata.html">⬅ Back</a>
 
   <audio id="startSound" src="engine.mp3"></audio>
